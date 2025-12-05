@@ -1,0 +1,7 @@
+{
+  "model_name": "t5-small",
+  "num_epochs": 3,
+  "batch_size": 2,
+  "learning_rate": 0.0003,
+  "best_eval_loss": 8.486027717590332
+}

@@ -1,0 +1,25 @@
+# FastAPI Backend
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+# Machine Learning & NLP
+torch
+transformers
+datasets
+sentencepiece
+protobuf
+
+# Evaluation Metrics
+rouge-score
+nltk
+scikit-learn
+
+# Data Processing
+pandas
+numpy
+pypdf
+
+# Utilities
+tqdm

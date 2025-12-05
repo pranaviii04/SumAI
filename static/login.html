@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SummAI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css?v=2">
+</head>
+
+<body>
+    <div class="bg-gradient"></div>
+
+    <div class="theme-toggle-container">
+        <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" style="display: none;">
+                <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <span class="theme-text">Dark Mode</span>
+        </button>
+    </div>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Welcome Back</h2>
+                <p>Login to continue to SummAI</p>
+            </div>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" class="form-input" required placeholder="name@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-input" required placeholder="••••••••">
+                </div>
+
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                Don't have an account? <a href="/signup">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize theme when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize theme
+            if (typeof initTheme === 'function') {
+                initTheme();
+            }
+            
+            // Add click event to theme toggle
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle && typeof toggleTheme === 'function') {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
