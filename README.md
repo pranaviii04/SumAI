@@ -165,8 +165,3 @@ Upload a PDF or TXT file to extract its raw text content.
 ### `GET /evaluate`
 Returns the latest evaluation metrics from the trained model.
 
----
-
-## 📝 License
-
-This project is open-source and available under the MIT License.
